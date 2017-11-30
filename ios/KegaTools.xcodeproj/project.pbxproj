@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E85CE6731FD00127008156BD /* KegaTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E85CE6721FD00127008156BD /* KegaTools.m */; };
-		E85CE6741FD00127008156BD /* KegaTools.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E85CE6711FD00127008156BD /* KegaTools.h */; };
+		E82DEED61FD006E400A315B9 /* KegaVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = E82DEED51FD006E400A315B9 /* KegaVideo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,16 +17,15 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				E85CE6741FD00127008156BD /* KegaTools.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E82DEED41FD006DC00A315B9 /* KegaVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KegaVideo.h; sourceTree = "<group>"; };
+		E82DEED51FD006E400A315B9 /* KegaVideo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KegaVideo.m; sourceTree = "<group>"; };
 		E85CE66E1FD00127008156BD /* libKegaTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKegaTools.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		E85CE6711FD00127008156BD /* KegaTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KegaTools.h; sourceTree = "<group>"; };
-		E85CE6721FD00127008156BD /* KegaTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KegaTools.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +58,8 @@
 		E85CE6701FD00127008156BD /* KegaTools */ = {
 			isa = PBXGroup;
 			children = (
-				E85CE6711FD00127008156BD /* KegaTools.h */,
-				E85CE6721FD00127008156BD /* KegaTools.m */,
+				E82DEED51FD006E400A315B9 /* KegaVideo.m */,
+				E82DEED41FD006DC00A315B9 /* KegaVideo.h */,
 			);
 			path = KegaTools;
 			sourceTree = "<group>";
@@ -123,7 +121,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E85CE6731FD00127008156BD /* KegaTools.m in Sources */,
+				E82DEED61FD006E400A315B9 /* KegaVideo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,9 +6,9 @@
 //  Copyright © 2017 Tim Honders. All rights reserved.
 //
 
-#import "KegaTools.h"
+#import "KegaVideo.h"
 
-@implementation KegaTools
+@implementation KegaVideo
 
 @synthesize bridge = _bridge;
 
@@ -18,13 +18,11 @@ RCT_EXPORT_MODULE();
 RCT_EXPORT_METHOD(getThumbnail:(NSString *)path callback:(RCTResponseSenderBlock)callback)
 {
     
-    
-
     NSURL *url = [NSURL fileURLWithPath:path];
 
-    NSLog(@"url: %@", [url absoluteString]);
+    AVURLAsset *asset = [AVURLAsset URLAssetWithURL:url options:nil];
 
-    AVAsset *asset = [AVAsset assetWithURL:url];
+    NSString *filename = [NSString stringWithFormat:@"%@.png", asset.URL.lastPathComponent];
 
     //  Get thumbnail at the very start of the video
     CMTime thumbnailTime = [asset duration];
@@ -40,18 +38,15 @@ RCT_EXPORT_METHOD(getThumbnail:(NSString *)path callback:(RCTResponseSenderBlock
     UIImage *thumbnail = [UIImage imageWithCGImage:imageRef];
     CGImageRelease(imageRef);
 
-    NSData *imgData = UIImageJPEGRepresentation(thumbnail, 1.0); 
-    NSLog(@"Size of Image(bytes):%d",[imgData length]);
-
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *thumbnail_path = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"thumbnail.png"];
+    NSString *thumbnail_path = [[paths objectAtIndex:0] stringByAppendingPathComponent:filename];
 
     // Save image.
     [UIImagePNGRepresentation(thumbnail) writeToFile:thumbnail_path atomically:YES];
     
     NSDictionary *response = @{
         @"path": thumbnail_path,
-        @"name": @"thumbnail.png"
+        @"filename": filename
     };
         
     callback(@[response]);

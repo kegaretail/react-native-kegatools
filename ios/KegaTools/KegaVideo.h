@@ -9,6 +9,6 @@
 #import <React/RCTBridge.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface KegaTools : NSObject <RCTBridgeModule>
+@interface KegaVideo : NSObject <RCTBridgeModule>
 
 @end
