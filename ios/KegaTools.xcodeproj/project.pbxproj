@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E82DEED61FD006E400A315B9 /* KegaVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = E82DEED51FD006E400A315B9 /* KegaVideo.m */; };
+		E888542B1FE963A7002D8915 /* KegaTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E88854291FE9638D002D8915 /* KegaTools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +27,8 @@
 		E82DEED41FD006DC00A315B9 /* KegaVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KegaVideo.h; sourceTree = "<group>"; };
 		E82DEED51FD006E400A315B9 /* KegaVideo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KegaVideo.m; sourceTree = "<group>"; };
 		E85CE66E1FD00127008156BD /* libKegaTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKegaTools.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E88854291FE9638D002D8915 /* KegaTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KegaTools.m; sourceTree = "<group>"; };
+		E888542A1FE96395002D8915 /* KegaTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KegaTools.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 		E85CE6701FD00127008156BD /* KegaTools */ = {
 			isa = PBXGroup;
 			children = (
+				E88854291FE9638D002D8915 /* KegaTools.m */,
+				E888542A1FE96395002D8915 /* KegaTools.h */,
 				E82DEED51FD006E400A315B9 /* KegaVideo.m */,
 				E82DEED41FD006DC00A315B9 /* KegaVideo.h */,
 			);
@@ -121,6 +126,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E888542B1FE963A7002D8915 /* KegaTools.m in Sources */,
 				E82DEED61FD006E400A315B9 /* KegaVideo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,7 +182,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -225,7 +231,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

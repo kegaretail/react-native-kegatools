@@ -20,6 +20,27 @@
         }
       },
       "/projects/MOBILE_InTouch"
+    ],
+    [
+      {
+        "raw": "react-native-kegatools@git+https://github.com/kegaretail/react-native-kegatools.git",
+        "scope": null,
+        "escapedName": "react-native-kegatools",
+        "name": "react-native-kegatools",
+        "rawSpec": "git+https://github.com/kegaretail/react-native-kegatools.git",
+        "spec": "git+https://github.com/kegaretail/react-native-kegatools.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:kegaretail/react-native-kegatools.git",
+          "sshUrl": "git+ssh://git@github.com/kegaretail/react-native-kegatools.git",
+          "httpsUrl": "git+https://github.com/kegaretail/react-native-kegatools.git",
+          "gitUrl": "git://github.com/kegaretail/react-native-kegatools.git",
+          "shortcut": "github:kegaretail/react-native-kegatools",
+          "directUrl": "https://raw.githubusercontent.com/kegaretail/react-native-kegatools/master/package.json"
+        }
+      },
+      "/projects/MOBILE_InTouch"
     ]
   ],
   "_from": "git+https://github.com/kegaretail/react-native-kegatools.git",
@@ -28,10 +49,10 @@
   "_location": "/react-native-kegatools",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "git+https://github.com/kegaretail/react-native-kegatools.git",
+    "raw": "react-native-kegatools@git+https://github.com/kegaretail/react-native-kegatools.git",
     "scope": null,
-    "escapedName": null,
-    "name": null,
+    "escapedName": "react-native-kegatools",
+    "name": "react-native-kegatools",
     "rawSpec": "git+https://github.com/kegaretail/react-native-kegatools.git",
     "spec": "git+https://github.com/kegaretail/react-native-kegatools.git",
     "type": "hosted",
@@ -46,13 +67,12 @@
     }
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
-  "_resolved": "git+https://github.com/kegaretail/react-native-kegatools.git#aed3a6be23c8f1f7b9fd56319d6dbabf16b11149",
-  "_shasum": "4870cc6968d9013109c4bae1a22818a7acebd5c8",
+  "_resolved": "git+https://github.com/kegaretail/react-native-kegatools.git#418eb1ded439d7eb8ec591713d228526010368dd",
+  "_shasum": "16660c7d0ddd0406efe2f03ba2e41ab97175cc9e",
   "_shrinkwrap": null,
-  "_spec": "git+https://github.com/kegaretail/react-native-kegatools.git",
+  "_spec": "react-native-kegatools@git+https://github.com/kegaretail/react-native-kegatools.git",
   "_where": "/projects/MOBILE_InTouch",
   "author": {
     "name": "Tim Honders"

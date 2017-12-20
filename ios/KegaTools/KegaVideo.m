@@ -30,6 +30,7 @@ RCT_EXPORT_METHOD(getThumbnail:(NSString *)path callback:(RCTResponseSenderBlock
 
     //  Get image from the video at the given time
     AVAssetImageGenerator *imageGenerator = [[AVAssetImageGenerator alloc] initWithAsset:asset];
+    imageGenerator.appliesPreferredTrackTransform = YES;
 
     NSError* error;
     CGImageRef imageRef = [imageGenerator copyCGImageAtTime:thumbnailTime actualTime:NULL error:&error];
