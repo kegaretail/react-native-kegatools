@@ -15,7 +15,7 @@
 RCT_EXPORT_MODULE();
 
 
-RCT_EXPORT_METHOD(getThumbnail:(NSString *)path callback:(RCTResponseSenderBlock)callback)
+RCT_EXPORT_METHOD(getThumbnail:(NSString *)path seconds:(int64_t *)seconds callback:(RCTResponseSenderBlock)callback)
 {
     
     NSURL *url = [NSURL fileURLWithPath:path];
@@ -24,16 +24,11 @@ RCT_EXPORT_METHOD(getThumbnail:(NSString *)path callback:(RCTResponseSenderBlock
 
     NSString *filename = [NSString stringWithFormat:@"%@.png", asset.URL.lastPathComponent];
 
-    //  Get thumbnail at the very start of the video
-    CMTime thumbnailTime = [asset duration];
-    thumbnailTime.value = 0;
-
-    //  Get image from the video at the given time
     AVAssetImageGenerator *imageGenerator = [[AVAssetImageGenerator alloc] initWithAsset:asset];
     imageGenerator.appliesPreferredTrackTransform = YES;
 
     NSError* error;
-    CGImageRef imageRef = [imageGenerator copyCGImageAtTime:thumbnailTime actualTime:NULL error:&error];
+    CGImageRef imageRef = [imageGenerator copyCGImageAtTime:CMTimeMake(seconds, 1) actualTime:NULL error:&error];
     if (error) NSLog(@"imageGenerator error: %@", error);
 
     UIImage *thumbnail = [UIImage imageWithCGImage:imageRef];
